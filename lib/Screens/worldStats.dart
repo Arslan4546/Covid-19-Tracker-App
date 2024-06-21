@@ -43,7 +43,8 @@ class _WorldStatsState extends State<WorldStats> with TickerProviderStateMixin {
             child: Column(
               children: [
            const  SizedBox(height: 30),
-               FutureBuilder(future: stateServices.fetchWorldRecords(), builder: (context,AsyncSnapshot<WorldStatesModel>snapshot) {
+               FutureBuilder(
+                   future: stateServices.fetchWorldRecords(), builder: (context,AsyncSnapshot<WorldStatesModel>snapshot) {
                  if(!snapshot.hasData){
                    return Expanded(
                        child:SpinKitCircle(
@@ -101,7 +102,7 @@ class _WorldStatsState extends State<WorldStats> with TickerProviderStateMixin {
                                  borderRadius: BorderRadius.circular(10),
                                  color: const Color(0xff1aa260)
                              ),
-                             child: const Center(child: Text("Track Contries",style: TextStyle(
+                             child: const Center(child: Text("Track Countries",style: TextStyle(
                                  fontSize: 20,
                                  fontWeight: FontWeight.bold,
                                  color: Colors.white
